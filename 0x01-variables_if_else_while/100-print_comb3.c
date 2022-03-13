@@ -1,41 +1,37 @@
 #include <stdio.h>
 
 /**
- * main - print double digit combos
- *
- * Description: print double digit combos
+ * main - Prints numbers between 00 to 89.
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	 int i, j;
+	int i, e;
 
-	 i = 48;
-	 j = 48;
+	i = 48;
+	e = 48;
 
-	 while (i < 58)
-	 {
-		 j = i + 1;
-		 while (j < 58)
-		 {
-			 putchair(i);
-			 putchair(j);
-
-			 if (i < 56 || j < 57)
-			 {
-				 putchar(44);
-				 putchar(32);
-			 }
-			 j++;
-		 }
-
-		 i++;
-	 }
-
-	 putchar(10);
-
-	 return (0);
+	while (e < 58)
+	{
+		i = 48;
+		while (i < 58)
+		{
+			if (e != i && e < i)
+			{
+				putchar(e);
+				putchar(i);
+				if (i == 57 && e == 56)
+				{
+					break;
+				}
+				putchar(',');
+				putchar(' ');
+			}
+			i++;
+		}
+		e++;
+	}
+	putchar('\n');
+	return (0);
 }
-
