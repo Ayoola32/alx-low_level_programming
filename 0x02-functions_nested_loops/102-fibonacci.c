@@ -31,4 +31,3 @@ int main(void)
 
 	return (0);
 }
-© 2022 GitHub, Inc.
